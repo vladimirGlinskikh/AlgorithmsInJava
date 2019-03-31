@@ -3,8 +3,8 @@ package bankAccount;
 public class BankAccount {
     private double balance;
 
-    public BankAccount(double openingBalans) {
-        this.balance = openingBalans;
+    public BankAccount(double balance) {
+        this.balance = balance;
     }
 
     public BankAccount() {
@@ -12,10 +12,16 @@ public class BankAccount {
     }
 
     public double deposit(double amount) {
-        return balance + amount;
+        balance += amount;
+        return balance;
     }
 
     public double withDraw(double amount) {
-        return balance - amount;
+        balance -= amount;
+        return balance;
+    }
+
+    public void display() {
+        System.out.println("balance=" + String.format("%.2f", balance));
     }
 }
