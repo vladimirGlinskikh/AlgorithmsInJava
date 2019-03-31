@@ -15,6 +15,12 @@ public class BankAccountTest {
     @Test
     void depositTheFundsIntoTheAccount() {
         BankAccount bankAccount = new BankAccount(32.11);
-        assertEquals(65.33, bankAccount.getDeposit(33.22), 0.00);
+        assertEquals(65.33, bankAccount.deposit(33.22), 0.00);
+    }
+
+    @Test
+    void withdrawalsFromTheAccount() {
+        BankAccount bankAccount = new BankAccount(56.40);
+        assertEquals(32.90, bankAccount.withDraw(23.50), 0.0);
     }
 }

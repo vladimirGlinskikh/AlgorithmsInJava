@@ -11,7 +11,11 @@ public class BankAccount {
 
     }
 
-    public double getDeposit(double amount) {
+    public double deposit(double amount) {
         return balance + amount;
+    }
+
+    public double withDraw(double amount) {
+        return balance - amount;
     }
 }
